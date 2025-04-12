@@ -3,102 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Haxball komutları rehberi. ! ve / ile başlayan admin, oyuncu ve izleyici komutları. Tüm yetkili kısayollarının açıklamalı listesi.">
   <title>Haxball Komutları - Ozora Haxball Education</title>
   <link rel="stylesheet" href="haxball.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMB0ND5432"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EMB0ND5432');
+  </script>
 </head>
 <body>
-
-  <header>
-    <h1>Ozora Haxball Education</h1>
-    <div class="marquee">
-      <p>Haxball komutlarıyla oyunun kontrolü sende! ⌨️⚙️</p>
-    </div>
-  </header>
-
-  <nav class="navbar">
+  <div class="sidebar">
+    <h3>🛠️ Komut Listesi</h3>
     <a href="index.html">Ana Sayfa</a>
-    <a href="topsurme.html">Top Sürme</a>
-    <a href="sutcekme.html">Şut Çekme</a>
-    <a href="calimatma.html">Çalım Atma</a>
-    <a href="alankapatma.html">Alan Kapatma</a>
-    <a href="pas.html">Pas Atma</a>
-    <a href="extrapolation.html">Extrapolation</a>
-    <a href="handicap.html">Handicap</a>
-  </nav>
+    <a href="#admin">Admin Komutları</a>
+    <a href="#kullanici">Oyuncu Komutları</a>
+  </div>
 
-  <!-- AdSense Reklam -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-3696374850517387"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <div class="content">
+    <div class="menu-bar">
+      <a href="topsurme.html">Top Sürme</a>
+      <a href="sutcekme.html">Şut Çekme</a>
+      <a href="calimatma.html">Çalım Atma</a>
+      <a href="alankapatma.html">Alan Kapatma</a>
+      <a href="pas.html">Pas Atma</a>
+      <a href="extrapolation.html">Extrapolation</a>
+      <a href="handicap.html">Handicap</a>
+      <a href="komutlar.html">Komutlar</a>
+    </div>
 
-  <section class="intro">
-    <h2>⌨️ Haxball Komutları Rehberi</h2>
-    <p>
-      Haxball'da hızlı yönetim, kontrol ve eğlence için kullanılan komutlar sayesinde sunucu yönetimi çok daha kolaydır.  
-      Komutlar genellikle <strong>!</strong> veya <strong>/</strong> ile başlar ve sadece admin tarafından değil, bazıları tüm oyuncular tarafından da kullanılabilir.
-    </p>
+    <ins class="adsbygoogle" style="display:block; text-align:center;"
+         data-ad-client="ca-pub-3696374850517387"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-    <h3>📋 Temel Komutlar</h3>
-    <ul>
-      <li><code>!help</code> → Kullanılabilir tüm komutları listeler.</li>
-      <li><code>!admin [isim]</code> → Belirtilen oyuncuyu admin yapar.</li>
-      <li><code>!mute [isim]</code> → Oyuncunun yazmasını engeller.</li>
-      <li><code>!unmute [isim]</code> → Susturulan oyuncuyu tekrar aktif eder.</li>
-      <li><code>!ban [isim]</code> → Oyuncuyu odadan kalıcı olarak atar.</li>
-      <li><code>!kick [isim]</code> → Oyuncuyu o anlık oyundan atar.</li>
-      <li><code>!clearbans</code> → Tüm banları temizler.</li>
-      <li><code>!pause</code> / <code>!unpause</code> → Maçı durdurur / devam ettirir.</li>
-    </ul>
+    <div class="box" id="admin">
+      <h2>⚙️ Admin Komutları</h2>
+      <ul>
+        <li><code>!kick OyuncuAdı</code> — Oyuncuyu odadan atar</li>
+        <li><code>!ban OyuncuAdı</code> — Oyuncuyu banlar</li>
+        <li><code>!spec OyuncuAdı</code> — Oyuncuyu izleyici yapar</li>
+        <li><code>!red / !blue / !spec</code> — Takıma geçirir</li>
+      </ul>
+    </div>
 
-    <h3>🛠️ Oda Ayarı Komutları (Bazı odalarda aktif)</h3>
-    <ul>
-      <li><code>/rec</code> → Maçı kaydetmeye başlar.</li>
-      <li><code>/stop</code> → Kayıt almayı durdurur.</li>
-      <li><code>/muteall</code> → Herkesi susturur.</li>
-      <li><code>/unmuteall</code> → Herkesi tekrar açar.</li>
-    </ul>
-
-    <h3>🧑‍⚖️ Admin Komutları</h3>
-    <ul>
-      <li><code>!spec [isim]</code> → Oyuncuyu izleyiciye alır.</li>
-      <li><code>!red [isim]</code> → Oyuncuyu kırmızı takıma alır.</li>
-      <li><code>!blue [isim]</code> → Oyuncuyu mavi takıma alır.</li>
-      <li><code>!afk [isim]</code> → Oyuncuyu otomatik olarak spec’e yollar.</li>
-    </ul>
-
-    <h3>🎮 Eğlenceli & Kullanışlı Ekstra Komutlar (Bazı modlarda)</h3>
-    <ul>
-      <li><code>!stats</code> → Oyuncu istatistiklerini gösterir.</li>
-      <li><code>!rank</code> → Sıralamayı gösterir.</li>
-      <li><code>!reset</code> → Tüm ayarları sıfırlar.</li>
-      <li><code>!random</code> → Oyuncuları rastgele takımlara ayırır.</li>
-    </ul>
-
-    <h3>💡 İpuçları</h3>
-    <p>
-      Komutlar çoğu zaman <strong>bot eklentileri</strong> veya özel scriptlerle aktif hale gelir.  
-      Eğer bazı komutlar çalışmıyorsa, büyük ihtimalle o odada aktif bot yoktur.  
-      Yine de <code>!help</code> komutunu yazarak desteklenen komutları görebilirsin.
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 OzoraHaxball</p>
+    <div class="box" id="kullanici">
+      <h2>🧑 Oyuncu Komutları</h2>
+      <ul>
+        <li><code>/afk</code> — Oyuncuyu otomatik izleyici yapar</li>
+        <li><code>/help</code> — Yardım komutlarını listeler</li>
+        <li><code>!ping</code> — Sunucu pingini gösterir</li>
+      </ul>
+    </div>
+    <div class="footer">
+    <footer>
+      
+      <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
+        <img src="instagram.png" width="40px" alt="Instagram">
+      </a>
+      <p>© 2025 OzoraHaxball</p>
+    </footer>
+  </div>
+  <footer class="footer">
+    <marquee behavior="scroll" direction="left" scrollamount="10">HaxBall ile ilgili daha fazla bilgi için Instagram hesabımızı takip edin!</marquee>
     <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
       <img src="instagram.png" width="40px" alt="Instagram">
     </a>
-    <div class="marquee">
-      <p>Komutları bilen kazanır. Bilgi güçtür! 🧠</p>
-    </div>
+    <p>© 2025 OzoraHaxball</p>
   </footer>
-
+  </div>
 </body>
 </html>
