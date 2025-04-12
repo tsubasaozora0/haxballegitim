@@ -3,78 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HAXBALL oyunculuğunu geliştirmek isteyen herkes için profesyonel eğitim rehberi. Ozora Haxball ile top sürmeden çalım atmaya kadar her şey burada.">
   <title>Ozora Haxball Education</title>
   <link rel="stylesheet" href="haxball.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
-</head>
+  
+   <!-- Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMB0ND5432"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EMB0ND5432');
+   </script>
 <body>
 
-  <header>
-    <h1>Ozora Haxball Education</h1>
-    <div class="marquee">
-      <p>Haxball kariyerine sağlam bir adım atmak için doğru yerdesin! ⚽️</p>
-    </div>
-  </header>
+  <div class="sidebar">
+    <h3>🔧 Hızlı Erişim</h3>
+    <a href="#profil">Profilim</a>
+    <a href="#neden">Neden Takip Etmelisin?</a>
+    <a href="#icerikler">İçerikler</a>
+    <a href="#gunun">Günün Taktiği</a>
+    <a href="#istatistik">İstatistikler</a>
+    <a href="#iletisim">İletişim</a>
+    dahası yakında..
+  </div>
 
-  <nav class="navbar">
-    <a href="topsurme.html">Top Sürme</a>
-    <a href="sutcekme.html">Şut Çekme</a>
-    <a href="calimatma.html">Çalım Atma</a>
-    <a href="alankapatma.html">Alan Kapatma</a>
-    <a href="pas.html">Pas Atma</a>
-    <a href="extrapolation.html">Extrapolation</a>
-    <a href="handicap.html">Handicap</a>
-    <a href="komutlar.html">Komutlar</a>
-  </nav>
+  <div class="content">
 
-  <!-- REKLAM BLOĞU -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-3696374850517387"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-  <section class="intro">
-    <h2>Ben Kimim?</h2>
-    <p>10 yılı aşkın süredir Haxball oynayan bir oyuncuyum. Sahada sergilediğim refleksler, pozisyon alma becerim ve oyun vizyonumla adım adım kariyerimi inşa ettim. Şimdi bu birikimi seninle paylaşıyorum.</p>
-
-    <h2>Site Hakkında</h2>
-    <p>Bu site, Haxball'a gönül vermiş her seviyeden oyuncuya faydalı olmayı amaçlamaktadır. Eğitim içerikleri, video analizleri, taktik önerileri ve daha fazlası burada seni bekliyor. Her içerik, sahada gerçekten işine yarayacak bilgiler sunar.</p>
-
-    <div class="video-container">
-      <video controls muted>
-        <source src="tanitim.mp4" type="video/mp4">
-        Tarayıcınız bu videoyu desteklemiyor.
-      </video>
+    <!-- Menü Bar -->
+    <div class="menu-bar">
+      <a href="topsurme.html">Top Sürme</a>
+      <a href="sutcekme.html">Şut Çekme</a>
+      <a href="calimatma.html">Çalım Atma</a>
+      <a href="alankapatma.html">Alan Kapatma</a>
+      <a href="pas.html">Pas Atma</a>
+      <a href="extrapolation.html">Extrapolation</a>
+      <a href="handicap.html">Handicap</a>
+      <a href="komutlar.html">Komutlar</a>
     </div>
 
-    <h3>📌 Bu Sitede Neler Var?</h3>
-    <ul>
-      <li>⚡ Top sürme teknikleri</li>
-      <li>🎯 Şut çekme ve fake shot eğitimleri</li>
-      <li>🤸 Çalım atma hareketleri ve yön taktikleri</li>
-      <li>🛡️ Alan kapatma stratejileri</li>
-      <li>🔁 Duvar pası, kısa/uzun pas gibi kombinasyonlar</li>
-    </ul>
+    <!-- Reklam Alanı -->
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-3696374850517387"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
-    <h3>📈 Neden Takip Etmelisin?</h3>
-    <p>Öz disiplin, taktik anlayış ve sahada fark yaratacak hamleler öğrenmek istiyorsan, tam da doğru yerdesin. Öğren, dene, geliştir.</p>
-  </section>
-
-  <footer>
-    <p>© 2025 OzoraHaxball</p>
-    <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
-      <img src="instagram.png" width="40px" alt="Instagram">
-    </a>
-    <div class="marquee">
-      <p>Instagram sayfamda çok daha fazlası seni bekliyor! 🚀</p>
+    <!-- İçerik Kutuları -->
+    <div class="box" id="profil">
+      <h2>Ben Kimim?</h2>
+      <p>10 yılı aşkın süredir Haxball oynayan bir oyuncuyum. Sahada sergilediğim refleksler, pozisyon alma becerim ve oyun vizyonumla adım adım kariyerimi inşa ettim. Şimdi bu birikimi seninle paylaşıyorum.</p>
     </div>
-  </footer>
+
+    <div class="box" id="neden">
+      <h2>Neden Takip Etmelisin?</h2>
+      <p>Çünkü burada gerçek saha deneyimi, yılların taktik birikimi ve etkili öğretici içeriklerle dolu bir kaynak var.</p>
+    </div>
+
+    <div class="box" id="icerikler">
+      <h2>Bu Sitede Neler Var?</h2>
+      <ul>
+        <li>⚽ Top sürme taktikleri</li>
+        <li>🎯 Şut çekme stilleri</li>
+        <li>💨 Çalım atma hareketleri</li>
+        <li>🛡️ Alan kapatma stratejileri</li>
+        <li>📤 Paslaşma çalışmaları</li>
+      </ul>
+    </div>
+
+    <div class="box" id="gunun">
+      <h2>Günün Taktiği</h2>
+      <p>“Fake shot ile rakibi yatır, boşluğu kapmadan topu sür!”</p>
+    </div>
+
+    <div class="box" id="istatistik">
+      <h2>HCL LEAGUE İstatistikler</h2>
+      <ul>
+        <li>30999 kişisel puan </li>
+          <li>🐐 Goat rütbesi</li>
+          <li>8.94 maç başı Puan</li>
+        <li>🔥 2381 Gol</li>
+        <li>🎯 701 asist Asist</li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <marquee behavior="scroll" direction="left" scrollamount="10">HaxBall ile ilgili daha fazla bilgi için Instagram hesabımızı takip edin!</marquee>
+      <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
+        <img src="instagram.png" width="40px" alt="Instagram">
+      </a>
+      <p>© 2025 OzoraHaxball</p>
+    </footer>
+  </div>
 
 </body>
 </html>
