@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yorumlar - Ozora HaxTopu</title>
+  <link rel="stylesheet" href="haxball.css" />
+
+  <!-- Google Adsense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387"
+          crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SEVTT23ZZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7SEVTT23ZZ');
+  </script>
+
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: rgba(10,10,20,0.85);
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00bcd4;
+    }
+
+    .logo-area {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-area img {
+      width: 180px;
+      filter: drop-shadow(0 0 10px #00bcd4);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      color: #00d9ff;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 15px;
+      background-color: #121212;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      resize: none;
+      height: 130px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #00bcd4;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+
+    .comment-list {
+      margin-top: 30px;
+    }
+
+    .comment-item {
+      background-color: #1a1a2e;
+      border-left: 4px solid #00bcd4;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      color: #ddd;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px 10px;
+      }
+    }
+  
+    /* Mesaj kutusu stili */
+    .alert {
+      display: none;
+      background-color: #ffcc00;
+      color: black;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+  
+  </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>🔧 Hızlı Erişim</h3>
+        <a href="index.html">Ana Sayfa</a>
+      </div>
+
+  <div class="container">
+    <div class="logo-area">
+      <img src="logo.png" alt="HaxBall Logo">
+    </div>
+
+    <div class="title">Sizden Gelenler</div>
+
+    <textarea id="yorum" placeholder="Yorumunuzu yazın..."></textarea>
+    <button onclick="gonder()">Gönder</button>
+
+    <div class="comment-list" id="yorumlarAlani">
+      <!-- Firebase yorumları buraya yüklenecek -->
+    </div>
+
+    <div class="footer">
+      © 2025 Ozora HaxTopu | Tüm hakları saklıdır.
+    </div>
+  </div>
+   <!-- Mesaj Alanı -->
+   <div class="alert" id="message-alert">
+    Çok Yakında Aktif Olacak
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBQhyDJ1G60FFSbYJtZGBeHiSEjXSBVSI",
+      authDomain: "ozorahaxball.firebaseapp.com",
+      projectId: "ozorahaxball",
+      storageBucket: "ozorahaxball.appspot.com",
+      messagingSenderId: "295152924083",
+      appId: "1:295152924083:web:228890913ec0e2d618c7c6",
+      measurementId: "G-7SEVTT23ZZ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function gonder() {
+      const yorumInput = document.getElementById("yorum");
+      const yorum = yorumInput.value.trim();
+      if (!yorum) {
+        alert("Yorum boş olamaz.");
+        return;
+      }
+
+      await addDoc(collection(db, "yorumlar"), {
+        icerik: yorum,
+        zaman: serverTimestamp()
+      });
+
+      yorumInput.value = "";
+      yorumlariGetir();
+    }
+
+    async function yorumlariGetir() {
+      const yorumlarAlani = document.getElementById("yorumlarAlani");
+      yorumlarAlani.innerHTML = "";
+
+      const q = query(collection(db, "yorumlar"), orderBy("zaman", "desc"));
+      const snapshot = await getDocs(q);
+
+      snapshot.forEach(doc => {
+        const veri = doc.data();
+        const div = document.createElement("div");
+        div.className = "comment-item";
+        div.textContent = veri.icerik;
+        yorumlarAlani.appendChild(div);
+      });
+    }
+
+    yorumlariGetir();
+
+       // Mesajı göstermek için fonksiyon
+       function showMessage(event) {
+      event.preventDefault(); // Formun gönderilmesini engeller
+
+      // Mesajı göster
+      document.getElementById("message-alert").style.display = "block";
+
+      // 5 saniye sonra mesajı gizle
+      setTimeout(function() {
+        document.getElementById("message-alert").style.display = "none";
+      }, 5000);
+    }
+  </script>
+
+    
+</body>
+</html>
