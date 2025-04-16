@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geri Bildirim - Ozora Haxball</title>
+  <link rel="stylesheet" href="haxball.css">
+  <style>
+    /* Yorum için teşekkür mesajı */
+    .thank-you-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h3>📝 Geri Bildirim</h3>
+    <a href="index.html">Ana Sayfa</a>
+  </div>
+
+  <div class="content">
+    <div class="box">
+      <h2>💬 Ne Düşünüyorsun?</h2>
+      <form>
+        <p>Siteyi nasıl buldunuz?</p>
+        <select style="padding: 10px; width: 100%;">
+          <option>Harika! 👏</option>
+          <option>İyi ama geliştirilebilir 👍</option>
+          <option>Çok karışık 😕</option>
+          <option>Hiç beğenmedim 😞</option>
+        </select><br><br>
+
+        <p>Yorumunuz:</p>
+        <textarea rows="5" style="width: 100%; padding: 10px;"></textarea><br><br>
+
+        <button style="padding: 12px 24px; background-color: var(--accent-color); color: #000; border: none; font-weight: bold; border-radius: 10px;">Gönder</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+<div class="box" style="text-align: center;">
+  <p>© 2025 OzoraHaxball</p>
+  <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
+    <img src="instagram.png" width="40px" alt="Instagram">
+  </a>
+  <div class="marquee">
+    <p style="color: #00d9ff;">Hadii tıkla şu instagram logosuna! 😉</p>
+  </div>
+</div>
+  </div>
+<script>
+    // Yorum için teşekkür mesajını göstermek ve sayfayı yenilemek için fonksiyon
+    function showThankYouMessage(event) {
+      event.preventDefault(); // Formun gönderilmesini engeller
+
+      // Teşekkür mesajını göster
+      document.getElementById("thank-you-message").style.display = "block";
+
+      // 5 saniye sonra mesajı gizle ve sayfayı yenile
+      setTimeout(function() {
+        document.getElementById("thank-you-message").style.display = "none";
+        window.location.reload(); // Sayfayı yeniler
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
