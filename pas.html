@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta property="og:title" content="Haxball'da Paslaşma Sanatı" />
+<meta property="og:description" content="Alanı açmak ve takım oyununu ilerletmek için paslaşma stratejileri." />
+<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-pas.jpg" />
+<meta property="og:url" content="https://haxballegitim.netlify.app/pas.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Şut Çekme - Ozora Haxball Education</title>
+  <title>Pas Atma - Ozora Haxball Education</title>
   <link rel="stylesheet" href="haxball.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMB0ND5432"></script>
@@ -15,16 +22,13 @@
   </script>
 </head>
 <body>
-
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
     <h3>🔧 Hızlı Erişim</h3>
     <a href="index.html">Ana Sayfa</a>
-    <a href="#temeller">Temel Unsurlar</a>
-    <a href="#taktik">Taktik İpuçları</a>
-    <a href="#durumlar">Duruma Göre Strateji</a>
+    <a href="#onem">Pasın Önemi</a>
+    <a href="#calisma">Pas Çalışmaları</a>
   </div>
-
-
 
   <div class="content">
     <div class="menu-bar">
@@ -37,8 +41,7 @@
       <a href="komutlar.html">Komutlar</a>
     </div>
 
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
+    <ins class="adsbygoogle" style="display:block; text-align:center;"
          data-ad-client="ca-pub-3696374850517387"
          data-ad-slot="1234567890"
          data-ad-format="auto"
@@ -46,36 +49,68 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
     <div class="box" id="onem">
-      <h2>Pas Atmanın Önemi</h2>
-      <p>Takım oyununu güçlendiren en kritik unsur paslaşmadır. Oyun akışını kontrol edebilmek için pas kabiliyetin yüksek olmalı.</p>
+      <h2>📤 Pas Atmanın Önemi</h2>
+      <p>Haxball'da paslaşmak, sahada sadece bireysel değil takım olarak üstünlük kurmanın anahtarıdır. Oyunun hızını belirler ve kontrolü elinizde tutmanızı sağlar.</p>
     </div>
 
     <div class="box" id="calisma">
-      <h2>Pas Çalışmaları</h2>
+      <h2>🛠️ Pas Teknikleri & Antrenman</h2>
       <ul>
-        <li>Kısa paslarla hızlı oyun kurma</li>
-        <li>Uzun paslarla alan değişimi</li>
-        <li>Duvar paslarıyla savunmayı delme</li>
-        <li>Açılı paslarla sürpriz atak oluşturma</li>
+        <li><strong>Kısa Pas:</strong> Yakın mesafede kontrollü top dağılımı.</li>
+        <li><strong>Uzun Pas:</strong> Alan değiştirmek ve hızlı atak başlatmak için.</li>
+        <li><strong>Duvar Pası:</strong> Savunmayı bölmek için hızlı geri dönüşlü paslar.</li>
+        <li><strong>Açılı Pas:</strong> Beklenmedik yönlere pas atarak rakibi yanıltmak.</li>
       </ul>
     </div>
-    <!-- Video Kutusu -->
-<div class="box">
-  <h2>🎥 Örnek Pas Atma Videosu</h2>
-  <video width="100%" controls autoplay muted loop playsinline style="border-radius: 12px;">
-    <source src="pas atma.mp4" type="video/mp4">
-    Tarayıcınız video etiketini desteklemiyor.
-  </video>
-</div>
-    <div>
-<footer class="footer">
-      <marquee behavior="scroll" direction="left" scrollamount="10">HaxBall ile ilgili daha fazla bilgi için Instagram hesabımızı takip edin!</marquee>
+
+    <div class="box">
+      <h2>🎯 Antrenman Tavsiyeleri</h2>
+      <ul>
+        <li>2v2 ve 3v3 maçlarda sık sık kısa ve uzun pas kombinasyonları dene.</li>
+        <li>Duvarlarla çalışarak farklı açılardan pas zamanlaması yap.</li>
+        <li>Görüş alanını artırarak oyuncu konumlamalarına dikkat et.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>🎥 Pas Atma Videosu</h2>
+      <video width="100%" controls autoplay muted loop playsinline style="border-radius: 12px;">
+        <source src="pas atma.mp4" loading="lazy" type="video/mp4" />
+      </video>
+    </div>
+
+    <footer class="footer">
+      <marquee behavior="scroll" direction="left" scrollamount="10">Instagram’da bizi takip ederek içeriklerimizden ilk sen haberdar ol!</marquee>
       <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
-        <img src="instagram.png" width="40px" alt="Instagram">
+        <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
       </a>
       <p>© 2025 OzoraHaxball</p>
     </footer>
   </div>
-  </div>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+    
+        lazyMedia.forEach(media => {
+          media.addEventListener("load", () => {
+            media.classList.add("loaded");
+          });
+        });
+      });
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+      }
+    </script>
+    
 </body>
 </html>
