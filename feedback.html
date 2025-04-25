@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta property="og:title" content="Yorumlarını Bizimle Paylaş!" />
+<meta property="og:description" content="Senin fikirlerin bizim için önemli. Düşüncelerini bildir!" />
+<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-feedback.jpg" />
+<meta property="og:url" content="https://haxballegitim.netlify.app/yorumlar.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geri Bildirim - Ozora Haxball</title>
   <link rel="stylesheet" href="haxball.css">
-  <style>
-    /* Yorum için teşekkür mesajı */
-    .thank-you-message {
-      display: none;
-      background-color: #d4edda;
-      color: #155724;
-      padding: 10px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
 </head>
 <body>
-
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
     <h3>📝 Geri Bildirim</h3>
     <a href="index.html">Ana Sayfa</a>
@@ -29,9 +24,10 @@
   <div class="content">
     <div class="box">
       <h2>💬 Ne Düşünüyorsun?</h2>
-      <form>
+      <form action="https://formspree.io/f/your_form_id" method="POST">
         <p>Siteyi nasıl buldunuz?</p>
-        <select style="padding: 10px; width: 100%;">
+        <select name="site_durumu" style="padding: 10px; width: 100%;" required>
+          <option value="" disabled selected>Seçiniz</option>
           <option>Harika! 👏</option>
           <option>İyi ama geliştirilebilir 👍</option>
           <option>Çok karışık 😕</option>
@@ -39,37 +35,45 @@
         </select><br><br>
 
         <p>Yorumunuz:</p>
-        <textarea rows="5" style="width: 100%; padding: 10px;"></textarea><br><br>
+        <textarea name="yorum" rows="5" style="width: 100%; padding: 10px;" placeholder="Fikrini yaz..." required></textarea><br><br>
 
-        <button style="padding: 12px 24px; background-color: var(--accent-color); color: #000; border: none; font-weight: bold; border-radius: 10px;">Gönder</button>
+        <button type="submit" style="padding: 12px 24px; background-color: var(--accent-color); color: #000; border: none; font-weight: bold; border-radius: 10px;">Gönder</button>
       </form>
     </div>
 
-    <!-- Footer -->
-<div class="box" style="text-align: center;">
-  <p>© 2025 OzoraHaxball</p>
-  <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
-    <img src="instagram.png" width="40px" alt="Instagram">
-  </a>
-  <div class="marquee">
-    <p style="color: #00d9ff;">Hadii tıkla şu instagram logosuna! 😉</p>
+    <footer class="footer">
+      <marquee behavior="scroll" direction="left" scrollamount="10">Görüşlerin bizim için çok değerli. Teşekkürler!</marquee>
+      <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
+        <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
+      </a>
+      <p>© 2025 OzoraHaxball</p>
+    </footer>
   </div>
-</div>
-  </div>
-<script>
-    // Yorum için teşekkür mesajını göstermek ve sayfayı yenilemek için fonksiyon
-    function showThankYouMessage(event) {
-      event.preventDefault(); // Formun gönderilmesini engeller
-
-      // Teşekkür mesajını göster
-      document.getElementById("thank-you-message").style.display = "block";
-
-      // 5 saniye sonra mesajı gizle ve sayfayı yenile
-      setTimeout(function() {
-        document.getElementById("thank-you-message").style.display = "none";
-        window.location.reload(); // Sayfayı yeniler
-      }, 5000);
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
     }
-  </script>
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+    
+        lazyMedia.forEach(media => {
+          media.addEventListener("load", () => {
+            media.classList.add("loaded");
+          });
+        });
+      });
+    </script>
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+      }
+    </script>
+    
 </body>
 </html>
