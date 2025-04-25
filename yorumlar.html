@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta property="og:title" content="Yorumlarını Bizimle Paylaş!" />
+<meta property="og:description" content="Senin fikirlerin bizim için önemli. Düşüncelerini bildir!" />
+<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-feedback.jpg" />
+<meta property="og:url" content="https://haxballegitim.netlify.app/yorumlar.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yorumlar - Ozora HaxTopu</title>
@@ -115,6 +122,7 @@
   </style>
 </head>
 <body>
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
     <div class="sidebar">
         <h3>🔧 Hızlı Erişim</h3>
         <a href="index.html">Ana Sayfa</a>
@@ -210,6 +218,30 @@
     }
   </script>
 
-    
+<script>
+  function toggleSidebar() {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("active");
+  }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+  
+      lazyMedia.forEach(media => {
+        media.addEventListener("load", () => {
+          media.classList.add("loaded");
+        });
+      });
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+        .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+    }
+  </script>
+  
 </body>
 </html>
