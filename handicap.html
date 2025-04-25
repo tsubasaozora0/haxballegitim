@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta property="og:title" content="Handicap Sistemi Nedir?" />
+<meta property="og:description" content="Oyunu dengelemenin yollarını öğren. Zayıf oyunculara avantaj sağla!" />
+<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-handicap.jpg" />
+<meta property="og:url" content="https://haxballegitim.netlify.app/handicap.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Handicap - Ozora Haxball Education</title>
@@ -15,10 +22,11 @@
   </script>
 </head>
 <body>
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
-    <h3>🔧 Hızlı Erişim</h3>
+    <h3>📉 Handicap Nedir?</h3>
     <a href="index.html">Ana Sayfa</a>
-    <a href="#nedir">Handicap Nedir?</a>
+    <a href="#nedir">Tanım</a>
     <a href="#avantaj">Avantajları</a>
     <a href="#dezavantaj">Dezavantajları</a>
   </div>
@@ -41,33 +49,63 @@
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-    <div class="box" id="nedir">
+    <section class="box" id="nedir">
       <h2>🏁 Handicap Nedir?</h2>
-      <p>Oyuncular veya takımlar arasındaki güç farkını dengelemek amacıyla verilen avantaj/dezavantaj sistemidir.</p>
-    </div>
+      <p>Handicap, iki takım arasında adil bir rekabet ortamı sağlamak için daha zayıf olan takıma ekstra avantajlar tanınmasıdır.</p>
+    </section>
 
-    <div class="box" id="avantaj">
+    <section class="box" id="avantaj">
       <h2>✅ Avantajları</h2>
       <ul>
-        <li>Daha dengeli karşılaşmalar yaratır.</li>
-        <li>Yeni başlayanlar için fırsat sunar.</li>
+        <li>Güç farkı olan takımlar arasında denge sağlar.</li>
+        <li>Yeni oyuncuların oyuna tutunmasını kolaylaştırır.</li>
+        <li>Rekabetçi ruhu daha uzun süre korur.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="box" id="dezavantaj">
+    <section class="box" id="dezavantaj">
       <h2>❌ Dezavantajları</h2>
       <ul>
-        <li>Profesyonel oyuncular için rekabet hissi azalabilir.</li>
-        <li>Hatalı ayarlanırsa oyun dengesini bozabilir.</li>
+        <li>Deneyimli oyuncular için haksızlık gibi algılanabilir.</li>
+        <li>Oyun akışında beklenmedik dengesizlikler oluşabilir.</li>
       </ul>
-    </div>
+    </section>
+
     <footer class="footer">
-      <marquee behavior="scroll" direction="left" scrollamount="10">HaxBall ile ilgili daha fazla bilgi için Instagram hesabımızı takip edin!</marquee>
+      <marquee behavior="scroll" direction="left" scrollamount="10">Daha adil bir oyun için doğru ayarları kullan!</marquee>
       <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
-        <img src="instagram.png" width="40px" alt="Instagram">
+        <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
       </a>
       <p>© 2025 OzoraHaxball</p>
     </footer>
   </div>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+    
+        lazyMedia.forEach(media => {
+          media.addEventListener("load", () => {
+            media.classList.add("loaded");
+          });
+        });
+      });
+    </script>
+
+</script>
+    
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+      .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+  }
+</script>
+
 </body>
 </html>
