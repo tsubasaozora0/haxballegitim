@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta property="og:title" content="Haxball'da Extrapolation Nedir?" />
+<meta property="og:description" content="Lag ve gecikme durumlarını nasıl avantajına çevirirsin?" />
+<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-extrapolation.jpg" />
+<meta property="og:url" content="https://haxballegitim.netlify.app/extrapolation.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Extrapolation - Ozora Haxball Education</title>
@@ -15,10 +22,11 @@
   </script>
 </head>
 <body>
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
     <h3>🔧 Hızlı Erişim</h3>
     <a href="index.html">Ana Sayfa</a>
-    <a href="#nedir">Extrapolation Nedir?</a>
+    <a href="#nedir">Nedir?</a>
     <a href="#avantaj">Avantajları</a>
     <a href="#dezavantaj">Dezavantajları</a>
   </div>
@@ -41,34 +49,61 @@
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-    <div class="box" id="nedir">
+    <section class="box" id="nedir">
       <h2>🧠 Extrapolation Nedir?</h2>
-      <p>Oyunda, hareket eden objelerin konumunu gecikmeye göre tahmin etmeye yarayan bir tekniktir.</p>
-    </div>
+      <p>Extrapolation, gecikmeden dolayı hareket eden nesnelerin tahmini konumunu gösteren bir ağ ayarıdır. Oyuncuların hareketlerini daha akıcı gösterir.</p>
+    </section>
 
-    <div class="box" id="avantaj">
+    <section class="box" id="avantaj">
       <h2>✅ Avantajları</h2>
       <ul>
-        <li>Lag olduğunda rakiplerin pozisyonunu daha tutarlı görmeni sağlar.</li>
-        <li>Akıcı bir oyun deneyimi sunar.</li>
+        <li>Lag sırasında oyuncu hareketlerini daha stabil gösterir.</li>
+        <li>Görüntüde takılmaları azaltır.</li>
+        <li>Top ve oyuncu pozisyonları senkronize görünür.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="box" id="dezavantaj">
+    <section class="box" id="dezavantaj">
       <h2>❌ Dezavantajları</h2>
       <ul>
-        <li>Yapay pozisyon kayması yaşanabilir.</li>
-        <li>Gerçek zamanlı temaslar gecikebilir.</li>
+        <li>Hatalı pozisyon tahminleri oluşabilir.</li>
+        <li>Temas anında gecikmeli tepkiler verebilir.</li>
+        <li>Gerçek zamanlı reflekslerde hata payı artar.</li>
       </ul>
-   <!-- Footer -->
-<div class="box" style="text-align: center;">
-  <p>© 2025 OzoraHaxball</p>
-  <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
-    <img src="instagram.png" width="40px" alt="Instagram">
-  </a>
-  <div class="marquee">
-    <p style="color: #00d9ff;">Yavaş Yavaş öğreniyorsun !</p>
+    </section>
+
+    <footer class="footer">
+      <marquee behavior="scroll" direction="left" scrollamount="10">Daha fazla teknik detay için bizi takipte kal!</marquee>
+      <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
+        <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
+      </a>
+      <p>© 2025 OzoraHaxball</p>
+    </footer>
   </div>
-</div>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+    
+        lazyMedia.forEach(media => {
+          media.addEventListener("load", () => {
+            media.classList.add("loaded");
+          });
+        });
+      });
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+      }
+    </script>
+    
 </body>
 </html>
