@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<meta property="og:title" content="Haxball'da Top Sürme Becerileri" />
+<meta property="og:description" content="Dar alanlarda bile topu rakibe kaptırmadan nasıl sürebilirsin?" />
+<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-topsurme.jpg" />
+<meta property="og:url" content="https://haxballegitim.netlify.app/topsurme.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Sürme - Ozora Haxball Education</title>
   <link rel="stylesheet" href="haxball.css" />
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387"
-          crossorigin="anonymous"></script>
-
-  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMB0ND5432"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,12 +22,12 @@
   </script>
 </head>
 <body>
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
     <h3>🔧 Hızlı Erişim</h3>
     <a href="index.html">Ana Sayfa</a>
     <a href="#teknikler">Temel Teknikler</a>
-    <a href="#gelismis">Gelişmiş Teknikler</a>
-    <a href="#taktikler">Taktiksel İpuçları</a>
+    <a href="#taktikler">Taktiksel Öneriler</a>
   </div>
 
   <div class="content">
@@ -48,42 +50,56 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
     <div class="box" id="teknikler">
-      <h2>Top Sürme Eğitimi</h2>
-      <p>Haxball'da top sürmek; sahadaki özgürlüğü ve oyunu yönlendirme gücünü simgeler. Hız, kontrol, sezgi ve doğru zamanlamanın birleşimidir.</p>
+      <h2>🚀 Temel Top Sürme Teknikleri</h2>
       <ul>
-        <li><strong>Dar Alan Kontrolü:</strong> Rakip baskısı altındayken kontrollü top sürme</li>
-        <li><strong>Köşe Dönüşü:</strong> Duvar yardımıyla yön değiştirme</li>
-        <li><strong>Boş Alan Koşusu:</strong> Topu geniş alana taşıyarak fırsat yaratma</li>
-      </ul>
-    </div>
-
-    <div class="box" id="gelismis">
-      <h2>Gelişmiş Teknikler</h2>
-      <ul>
-        <li><strong>Çift Hızlanma:</strong> Ani yön değişikliğiyle rakibi yanılt</li>
-        <li><strong>Yan Yana Sürme:</strong> Topu kontrol altında tutarken sağ-sol sürüşü</li>
-        <li><strong>Geriye Çekilme:</strong> Rakibi üstüne çekip boş alan yarat</li>
-        <li><strong>Duvardan Sekme:</strong> Topu duvara vurdurup rakibin dengesini boz</li>
+        <li><strong>Dar Alan Kontrolü:</strong> Yakın temasta topa sahip ol.</li>
+        <li><strong>Köşe Dönüşü:</strong> Duvarlardan seken top avantajını kullan.</li>
+        <li><strong>Boş Alanı Kullan:</strong> Rakip boşluk bırakırsa hızla sız!</li>
       </ul>
     </div>
 
     <div class="box" id="taktikler">
       <h2>🧠 Taktiksel Öneriler</h2>
       <ul>
-        <li>Top sürerken takım arkadaşlarını gözlemle</li>
-        <li>Rakiplerin savunma çizgisini analiz et</li>
-        <li>Rakibe şut tehdidi gösterip yön değiştir</li>
-        <li>Kaleye yaklaştığında sürpriz çalımlar dene</li>
+        <li>Rakibi çöz, ters tarafa yönel.</li>
+        <li>Takım arkadaşlarına pas ihtimalini sürekli açık bırak.</li>
+        <li>Yön değiştirirken topu kontrol kaybetmemeye dikkat et.</li>
+        <li>Çalım yapmadan önce pozisyon al.</li>
       </ul>
     </div>
 
     <footer class="footer">
-      <marquee behavior="scroll" direction="left" scrollamount="10">Top sürme bir sanattır. Gerçek ustalar topu konuşturur! 🎨⚽</marquee>
+      <marquee behavior="scroll" direction="left" scrollamount="10">Instagram hesabımızda videolu dribbling örnekleri seni bekliyor!</marquee>
       <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
-        <img src="instagram.png" width="40px" alt="Instagram">
+        <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
       </a>
       <p>© 2025 OzoraHaxball</p>
     </footer>
   </div>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+    
+        lazyMedia.forEach(media => {
+          media.addEventListener("load", () => {
+            media.classList.add("loaded");
+          });
+        });
+      });
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+      }
+    </script>
+    
 </body>
 </html>
