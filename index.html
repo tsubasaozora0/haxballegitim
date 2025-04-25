@@ -84,8 +84,8 @@
 
       <section class="box">
         <h2>🎬 Eğitim Tanıtımı</h2>
-        <video class="video" controls autoplay muted loop  playsinline>
-          <source src="tanitim.mp4"  type="video/mp4">
+        <video class="video" controls autoplay muted loop playsinline>
+          <source src="tanitim.mp4" type="video/mp4">
           Tarayıcınız video etiketini desteklemiyor.
         </video>
       </section>
@@ -134,25 +134,24 @@
       const sidebar = document.querySelector(".sidebar");
       sidebar.classList.toggle("active");
     }
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
-    
-        lazyMedia.forEach(media => {
-          media.addEventListener("load", () => {
-            media.classList.add("loaded");
-          });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+  
+      lazyMedia.forEach(media => {
+        media.addEventListener("load", () => {
+          media.classList.add("loaded");
         });
       });
-    </script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
-          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
-      }
-    </script>
-    
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+        .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+    }
+  </script>
 </body>
 </html>
