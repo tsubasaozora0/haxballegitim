@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta property="og:title" content="Haxball'da Şut Çekme Teknikleri" />
+<meta property="og:description" content="Zamanlama, güç ve açıyla gol atmanın sırlarını öğren!" />
+<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-sutcekme.jpg" />
+<meta property="og:url" content="https://haxballegitim.netlify.app/sutcekme.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Şut Çekme - Ozora Haxball Education</title>
@@ -15,13 +22,12 @@
   </script>
 </head>
 <body>
-
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
     <h3>🔧 Hızlı Erişim</h3>
     <a href="index.html">Ana Sayfa</a>
-    <a href="#temeller">Temel Unsurlar</a>
-    <a href="#taktik">Taktik İpuçları</a>
-    <a href="#durumlar">Duruma Göre Strateji</a>
+    <a href="#temeller">Şut Temelleri</a>
+    <a href="#ipuclari">İpuçları</a>
   </div>
 
   <div class="content">
@@ -35,7 +41,8 @@
       <a href="komutlar.html">Komutlar</a>
     </div>
 
-    <ins class="adsbygoogle" style="display:block; text-align:center;"
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
          data-ad-client="ca-pub-3696374850517387"
          data-ad-slot="1234567890"
          data-ad-format="auto"
@@ -43,39 +50,57 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
     <div class="box" id="temeller">
-      <h2>Şut Çekmenin Temel Unsurları</h2>
+      <h2>🎯 Şut Temelleri</h2>
       <ul>
-        <li><strong>Zamanlama:</strong> Savunma yerleşmeden şut çek.</li>
-        <li><strong>Açı Seçimi:</strong> Kaleyi çaprazdan hedefle.</li>
-        <li><strong>Güç & Kontrol:</strong> Gerektiğinde sert, gerektiğinde yumuşak şut.</li>
+        <li><strong>Zamanlama:</strong> Rakip savunması pozisyon almadan önce vur.</li>
+        <li><strong>Açı Seçimi:</strong> Kaleye doğru olan en geniş açıyı bul ve şutla.</li>
+        <li><strong>Güç:</strong> Gerektiğinde topu sert, gerektiğinde yumuşak vurmayı öğren.</li>
       </ul>
     </div>
 
-    <div class="box" id="taktik">
-      <h2>Profesyonel Taktik İpuçları</h2>
+    <div class="box" id="ipuclari">
+      <h2>💡 Profesyonel İpuçları</h2>
       <ul>
-        <li>Fake shot yaparak savunmayı şaşırt.</li>
-        <li>Topu duvardan sektirerek boşluk yarat.</li>
-        <li>Kalecinin pozisyonunu analiz ederek ters köşeye vur.</li>
+        <li><strong>Fake Shot:</strong> Şut çekecekmiş gibi yap ve rakibi şaşırt.</li>
+        <li><strong>Yerden Vuruş:</strong> Kalecilerin en zayıf noktası!</li>
+        <li><strong>Duvar Kullan:</strong> Şut açısı yaratmak için topu sektirerek açı oluştur.</li>
       </ul>
     </div>
 
-    <div class="box" id="durumlar">
-      <h2>Duruma Göre Şut Stratejileri</h2>
-      <ul>
-        <li><strong>Yalnızken:</strong> Topla hızlan, doğru açıyla şutu çıkar.</li>
-        <li><strong>Kaleciyle Karşı Karşıya:</strong> Vücudunu çevirip köşeye yerden vur.</li>
-        <li><strong>Savunma Baskısı Altında:</strong> Hızlıca pozisyon değiştirip sektirme şut kullan.</li>
-      </ul>
-    </div>
+    
+
     <footer class="footer">
-      <marquee behavior="scroll" direction="left" scrollamount="10">Şut çek, golü at, efsane ol! ⚽🔥</marquee>
+      <marquee behavior="scroll" direction="left" scrollamount="10">Efsane goller için doğru şutu öğren! Instagram’ı unutma!</marquee>
       <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
-        <img src="instagram.png" width="40px" alt="Instagram">
+        <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
       </a>
       <p>© 2025 OzoraHaxball</p>
     </footer>
   </div>
-
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+    
+        lazyMedia.forEach(media => {
+          media.addEventListener("load", () => {
+            media.classList.add("loaded");
+          });
+        });
+      });
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+      }
+    </script>
+    
 </body>
 </html>
