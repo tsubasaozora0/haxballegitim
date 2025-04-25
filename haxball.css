@@ -22,11 +22,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  display: flex;
   min-height: 100vh;
   overflow-x: hidden;
-  position: relative;
-  flex-direction: row;
 }
 
 .sidebar {
@@ -71,8 +68,10 @@ body {
 .content {
   margin-left: 280px;
   padding: 50px 40px;
-  flex: 1;
   animation: fadeIn 0.8s ease-in-out;
+  width: calc(100% - 280px);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .menu-bar {
@@ -226,3 +225,131 @@ li {
 .comment-item:last-child {
   border-bottom: none;
 }
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    box-shadow: none;
+    padding: 20px 10px;
+  }
+
+  .menu-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-bar a {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .video {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+/* Hamburger Menü */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+}
+
+/* Mobilde sidebar gizle */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .menu-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-bar a {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .sidebar {
+    display: none;
+    position: absolute;
+    background: var(--sidebar-bg);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    padding-top: 60px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+  }
+
+  .sidebar.active {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+img[loading="lazy"],
+video[loading="lazy"] {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: all 0.5s ease-in-out;
+}
+
+img[loading="lazy"].loaded,
+video[loading="lazy"].loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+video, img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+img[loading="lazy"],
+video[loading="lazy"] {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: all 0.5s ease-in-out;
+}
+
+img[loading="lazy"].loaded,
+video[loading="lazy"].loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
