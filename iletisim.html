@@ -5,37 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>İletişim - Ozora Haxball</title>
   <link rel="stylesheet" href="haxball.css" />
-  <style>
-    /* Mesaj kutusu stili */
-    .alert {
-      display: none;
-      background-color: #ffcc00;
-      color: black;
-      padding: 15px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
 </head>
 <body>
-
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
-    <h3>🔧 Hızlı Erişim</h3>
+    <h3>📬 İletişim</h3>
     <a href="index.html">Ana Sayfa</a>
   </div>
 
   <div class="content">
     <div class="box">
       <h2>📩 Bize Ulaşın</h2>
-
-      <!-- Mesaj Alanı -->
-      <div class="alert" id="message-alert">
-        Çok Yakında Aktif Olacak
-      </div>
-
-      <form action="https://formspree.io/f/your_form_id" method="POST" onsubmit="showMessage(event)">
+      <form action="https://formspree.io/f/your_form_id" method="POST">
         <label for="name">Ad Soyad:</label><br>
         <input type="text" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px;" /><br>
 
@@ -48,22 +30,39 @@
         <button type="submit" style="padding: 12px 24px; background-color: var(--accent-color); color: #000; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">Gönder</button>
       </form>
     </div>
+
+    <footer class="footer">
+      <marquee behavior="scroll" direction="left" scrollamount="10">Bizimle iletişime geçin, birlikte geliştirelim!</marquee>
+      <a href="https://instagram.com/haxballoynayantsubasa"  target="_blank">
+        <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
+      </a>
+      <p>© 2025 OzoraHaxball</p>
+    </footer>
   </div>
-
   <script>
-    // Mesajı göstermek için fonksiyon
-    function showMessage(event) {
-      event.preventDefault(); // Formun gönderilmesini engeller
-
-      // Mesajı göster
-      document.getElementById("message-alert").style.display = "block";
-
-      // 5 saniye sonra mesajı gizle
-      setTimeout(function() {
-        document.getElementById("message-alert").style.display = "none";
-      }, 5000);
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
+    </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+  
+      lazyMedia.forEach(media => {
+        media.addEventListener("load", () => {
+          media.classList.add("loaded");
+        });
+      });
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+        .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
     }
   </script>
-
+  
 </body>
 </html>
