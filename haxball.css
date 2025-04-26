@@ -4,7 +4,7 @@
   --bg-color: #0d0f1a;
   --sidebar-bg: #1a1d2e;
   --text-color: #f4f4f4;
-  --accent-color: #00d9ff;
+  --accent-color: #00d9ff; /* Daha canlı bir renk */
   --card-bg: #1f233a;
   --menu-hover: #00ffc8;
 }
@@ -26,6 +26,7 @@ body {
   color: var(--text-color);
   display: flex;
   flex-direction: column;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H60V60H0V0Z' fill='%231f233a'/%3E%3Cg opacity='0.4'%3E%3Cpath d='M9 17H21V29H9V17Z' fill='white'/%3E%3Cpath d='M39 17H51V29H39V17Z' fill='white'/%3E%3Cpath d='M9 31H21V43H9V31Z' fill='white'/%3E%3Cpath d='M39 31H51V43H39V31Z' fill='white'/%3E%3C/g%3E%3C/svg%3E"); /* Arka plan deseni */
 }
 
 .sidebar {
@@ -44,7 +45,7 @@ body {
 
 .sidebar h3 {
   color: var(--accent-color);
-  font-size: 20px;
+  font-size: 22px; /* Font boyutu artırıldı */
   margin-bottom: 15px;
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 10px;
@@ -58,6 +59,7 @@ body {
   margin-bottom: 10px;
   border-left: 4px solid transparent;
   transition: 0.3s;
+  font-size: 16px; /* Font boyutu artırıldı */
 }
 
 .sidebar a:hover {
@@ -125,11 +127,16 @@ body {
   border-radius: 15px;
   margin-bottom: 40px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease; /* Animasyon */
+}
+
+.box:hover {
+  transform: scale(1.03); /* Kutulara büyüme efekti */
 }
 
 .box h2 {
   color: var(--accent-color);
-  font-size: 24px;
+  font-size: 26px; /* Font boyutu artırıldı */
   margin-bottom: 15px;
 }
 
@@ -159,13 +166,13 @@ li {
 }
 
 .footer a img {
-  vertical-align: middle; /* Logo ve metin dikey hizalama */
-  margin: 0 5px; /* Logo etrafında simetrik boşluk */
-  transition: transform 0.3s ease; /* Animasyon geçişi */
+  vertical-align: middle;
+  margin: 0 5px;
+  transition: transform 0.3s ease;
 }
 
 .footer a:hover img {
-  transform: rotate(15deg) scale(1.2); /* Daha dinamik bir efekt */
+  transform: rotate(15deg) scale(1.2);
 }
 
 .footer marquee {
