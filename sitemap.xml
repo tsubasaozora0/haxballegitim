@@ -3,58 +3,82 @@
 
   <url>
     <loc>https://haxballegitim.netlify.app/</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://haxballegitim.netlify.app/hakkimizda.html</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://haxballegitim.netlify.app/404.html</loc>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/alankapatma.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://haxballegitim.netlify.app/gizlilik.html</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://haxballegitim.netlify.app/calimatma.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://haxballegitim.netlify.app/cerezler.html</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/extrapolation.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/feedback.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/gizlilik.html</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/hakkimizda.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/handicap.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/iletisim.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/komutlar.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/pas.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://haxballegitim.netlify.app/sutcekme.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://haxballegitim.netlify.app/topsurme.html</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://haxballegitim.netlify.app/sutcekme.html</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://haxballegitim.netlify.app/yorumlar.html</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://haxballegitim.netlify.app/feedback.html</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
