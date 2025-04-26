@@ -2,11 +2,11 @@
 <html lang="tr">
 <head>
   <meta property="og:title" content="Haxball Komut Rehberi" />
-<meta property="og:description" content="Admin ve kullanıcı komutlarının tüm detayları burada!" />
-<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-komutlar.jpg" />
-<meta property="og:url" content="https://haxballegitim.netlify.app/komutlar.html" />
-<meta property="og:type" content="article" />
-<meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:description" content="Admin ve kullanıcı komutlarının tüm detayları burada!" />
+  <meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-komutlar.jpg" />
+  <meta property="og:url" content="https://haxballegitim.netlify.app/komutlar.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,10 +15,12 @@
   <meta name="description" content="Haxball'da kullanabileceğiniz tüm komutların detaylı açıklaması ve rehberi. Oda yönetimi, oyuncu kontrolleri ve daha fazlası.">
   <meta name="keywords" content="Haxball, Komutlar, Admin Komutları, Oyuncu Komutları, Haxball Rehber, Script, Oda Yönetimi">
   <meta name="author" content="Ozora Haxball">
-  
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387"
-          crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMB0ND5432"></script>
@@ -32,23 +34,23 @@
 <body>
   <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
-    <h3>🛠️ Komut Listesi</h3>
-    <a href="index.html">Ana Sayfa</a>
-    <a href="#admin">Admin Komutları</a>
-    <a href="#kullanici">Oyuncu Komutları</a>
-    <a href="#ozel">Ekstra Scriptler</a>
+    <h3><i class="fas fa-terminal"></i> Komut Listesi</h3>
+    <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+    <a href="#admin"><i class="fas fa-user-shield"></i> Admin Komutları</a>
+    <a href="#kullanici"><i class="fas fa-users"></i> Oyuncu Komutları</a>
+    <a href="#ozel"><i class="fas fa-code"></i> Ekstra Scriptler</a>
   </div>
 
   <div class="content">
     <div class="menu-bar">
-      <a href="topsurme.html">Top Sürme</a>
-      <a href="sutcekme.html">Şut Çekme</a>
-      <a href="calimatma.html">Çalım Atma</a>
-      <a href="alankapatma.html">Alan Kapatma</a>
-      <a href="pas.html">Pas Atma</a>
-      <a href="extrapolation.html">Extrapolation</a>
-      <a href="handicap.html">Handicap</a>
-      <a href="komutlar.html">Komutlar</a>
+      <a href="topsurme.html"><i class="fas fa-futbol"></i> Top Sürme</a>
+      <a href="sutcekme.html"><i class="fas fa-bullseye"></i> Şut Çekme</a>
+      <a href="calimatma.html"><i class="fas fa-running"></i> Çalım Atma</a>
+      <a href="alankapatma.html"><i class="fas fa-shield-alt"></i> Alan Kapatma</a>
+      <a href="pas.html"><i class="fas fa-exchange-alt"></i> Pas Atma</a>
+      <a href="extrapolation.html"><i class="fas fa-chart-line"></i> Extrapolation</a>
+      <a href="handicap.html"><i class="fas fa-balance-scale"></i> Handicap</a>
+      <a href="komutlar.html"><i class="fas fa-terminal"></i> Komutlar</a>
     </div>
 
     <ins class="adsbygoogle" style="display:block; text-align:center;"
@@ -59,44 +61,43 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
     <div class="box" id="admin">
-      <h2>⚙️ Admin Komutları</h2>
+      <h2><i class="fas fa-user-shield"></i> Admin Komutları</h2>
       <p>Oda yöneticileri için yetki komutları:</p>
       <ul>
-        <li><code>!kick OyuncuAdı</code> — Oyuncuyu odadan çıkarır.</li>
-        <li><code>!ban OyuncuAdı</code> — Oyuncuyu banlar.</li>
-        <li><code>!unban OyuncuAdı</code> — Banlanan oyuncunun banını kaldırır.</li>
-        <li><code>!spec OyuncuAdı</code> — Oyuncuyu izleyici yapar.</li>
-        <li><code>!red / !blue</code> — Oyuncuyu kırmızı/mavi takıma geçirir.</li>
-        <li><code>!pause / !unpause</code> — Maçı durdurur/devam ettirir.</li>
+        <li><code>!kick OyuncuAdı</code> - Oyuncuyu odadan çıkarır.</li>
+        <li><code>!ban OyuncuAdı</code> - Oyuncuyu banlar.</li>
+        <li><code>!unban OyuncuAdı</code> - Banlanan oyuncunun banını kaldırır.</li>
+        <li><code>!spec OyuncuAdı</code> - Oyuncuyu izleyici yapar.</li>
+        <li><code>!red / !blue</code> - Oyuncuyu kırmızı/mavi takıma geçirir.</li>
+        <li><code>!pause / !unpause</code> - Maçı durdurur/devam ettirir.</li>
       </ul>
     </div>
 
     <div class="box" id="kullanici">
-      <h2>🧑 Oyuncu Komutları</h2>
+      <h2><i class="fas fa-users"></i> Oyuncu Komutları</h2>
       <p>Her oyuncunun kullanabileceği temel komutlar:</p>
       <ul>
-        <li><code>/afk</code> — Otomatik olarak izleyici moduna geçer.</li>
-        <li><code>/help</code> — Komut listesini gösterir.</li>
-        <li><code>!ping</code> — Sunucu gecikmesini gösterir.</li>
-        <li><code>!stats</code> — Oyun içi istatistiklerini gösterir.</li>
-        <li><code>!r</code> — Son yazılanı hızlıca tekrar eder.</li>
+        <li><code>/afk</code> - Otomatik olarak izleyici moduna geçer.</li>
+        <li><code>/help</code> - Komut listesini gösterir.</li>
+        <li><code>!ping</code> - Sunucu gecikmesini gösterir.</li>
+        <li><code>!stats</code> - Oyun içi istatistiklerini gösterir.</li>
+        <li><code>!r</code> - Son yazılanı hızlıca tekrar eder.</li>
       </ul>
     </div>
 
     <div class="box" id="ozel">
-      <h2>📜 Script & Özel Komutlar</h2>
+      <h2><i class="fas fa-code"></i> Script & Özel Komutlar</h2>
       <p>Bot veya özel kodlar ile kullanılabilecek bazı gelişmiş komutlar:</p>
       <ul>
-        <li><code>!top10</code> — En iyi 10 oyuncu listesi.</li>
-        <li><code>!leaderboard</code> — Sezon sıralamasını gösterir.</li>
-        <li><code>!mute OyuncuAdı</code> — Oyuncunun sohbet yetkisini alır.</li>
-        <li><code>!reset</code> — Oyun istatistiklerini sıfırlar (admin komutu).</li>
-        <li><code>/afk</code> — Oyuncuyu otomatik izleyici yapar</li>
-        <li><code>/help</code> — Yardım komutlarını listeler</li>
-        <li><code>!ping</code> — Sunucu pingini gösterir</li>
-        <li><code>/extrapolation</code> — pix atmanızı kolaylaştırır (tavsiye 75-150 arasıdır)
-        <li><code>/handicap</code> — Lag orantınızı düzenler (tavsiye etmiyorum)</li></li>
-      </ul>
+        <li><code>!top10</code> - En iyi 10 oyuncu listesi.</li>
+        <li><code>!leaderboard</code> - Sezon sıralamasını gösterir.</li>
+        <li><code>!mute OyuncuAdı</code> - Oyuncunun sohbet yetkisini alır.</li>
+        <li><code>!reset</code> - Oyun istatistiklerini sıfırlar (admin komutu).</li>
+        <li><code>/afk</code> - Oyuncuyu otomatik izleyici yapar</li>
+        <li><code>/help</code> - Yardım komutlarını listeler</li>
+        <li><code>!ping</code> - Sunucu pingini gösterir</li>
+        <li><code>/extrapolation</code> - pix atmanızı kolaylaştırır (tavsiye 75-150 arasıdır)</li>
+        <li><code>/handicap</code> - Lag orantınızı düzenler (tavsiye etmiyorum)</li>
       </ul>
     </div>
 
@@ -115,25 +116,24 @@
       const sidebar = document.querySelector(".sidebar");
       sidebar.classList.toggle("active");
     }
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
-    
-        lazyMedia.forEach(media => {
-          media.addEventListener("load", () => {
-            media.classList.add("loaded");
-          });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+
+      lazyMedia.forEach(media => {
+        media.addEventListener("load", () => {
+          media.classList.add("loaded");
         });
       });
-    </script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
-          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
-      }
-    </script>
-    
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+        .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+    }
+  </script>
 </body>
 </html>
