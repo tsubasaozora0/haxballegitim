@@ -2,42 +2,47 @@
 <html lang="tr">
 <head>
   <meta property="og:title" content="Yorumlarını Bizimle Paylaş!" />
-<meta property="og:description" content="Senin fikirlerin bizim için önemli. Düşüncelerini bildir!" />
-<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-feedback.jpg" />
-<meta property="og:url" content="https://haxballegitim.netlify.app/yorumlar.html" />
-<meta property="og:type" content="article" />
-<meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:description" content="Senin fikirlerin bizim için önemli. Düşüncelerini bildir!" />
+  <meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-feedback.jpg" />
+  <meta property="og:url" content="https://haxballegitim.netlify.app/yorumlar.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geri Bildirim - Ozora Haxball</title>
   <link rel="stylesheet" href="haxball.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
-    <h3>📝 Geri Bildirim</h3>
-    <a href="index.html">Ana Sayfa</a>
+    <h3><i class="fas fa-comment-dots"></i> Geri Bildirim</h3>
+    <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
   </div>
 
   <div class="content">
     <div class="box">
-      <h2>💬 Ne Düşünüyorsun?</h2>
-      <form action="https://formspree.io/f/your_form_id" method="POST">
-        <p>Siteyi nasıl buldunuz?</p>
+      <h2><i class="fas fa-comments"></i> Ne Düşünüyorsun?</h2>
+      <form action="https://formspree.io/f/xpwdwdnp" method="POST">
+        <p><i class="fas fa-question-circle"></i> Siteyi nasıl buldunuz?</p>
         <select name="site_durumu" style="padding: 10px; width: 100%;" required>
           <option value="" disabled selected>Seçiniz</option>
-          <option>Harika! 👏</option>
-          <option>İyi ama geliştirilebilir 👍</option>
-          <option>Çok karışık 😕</option>
-          <option>Hiç beğenmedim 😞</option>
+          <option>Harika! <i class="fas fa-thumbs-up"></i></option>
+          <option>İyi ama geliştirilebilir <i class="fas fa-meh"></i></option>
+          <option>Çok karışık <i class="fas fa-frown"></i></option>
+          <option>Hiç beğenmedim <i class="fas fa-angry"></i></option>
         </select><br><br>
 
-        <p>Yorumunuz:</p>
+        <p><i class="fas fa-pencil-alt"></i> Yorumunuz:</p>
         <textarea name="yorum" rows="5" style="width: 100%; padding: 10px;" placeholder="Fikrini yaz..." required></textarea><br><br>
 
-        <button type="submit" style="padding: 12px 24px; background-color: var(--accent-color); color: #000; border: none; font-weight: bold; border-radius: 10px;">Gönder</button>
+        <button type="submit" style="padding: 12px 24px; background-color: var(--accent-color); color: #000; border: none; font-weight: bold; border-radius: 10px;"><i class="fas fa-paper-plane"></i> Gönder</button>
       </form>
     </div>
 
@@ -54,26 +59,53 @@
       const sidebar = document.querySelector(".sidebar");
       sidebar.classList.toggle("active");
     }
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
-    
-        lazyMedia.forEach(media => {
-          media.addEventListener("load", () => {
-            media.classList.add("loaded");
-          });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+
+      lazyMedia.forEach(media => {
+        media.addEventListener("load", () => {
+          media.classList.add("loaded");
         });
       });
-    </script>
-    
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
-          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
-      }
-    </script>
-    
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+        .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+    }
+  </script>
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+      // Formun varsayılan davranışını engelle
+      event.preventDefault();
+
+      // Form verilerini al
+      const formData = new FormData(form);
+
+      // Formu Formspree'ye gönder
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // Başarı mesajı göster
+          alert('Mesajınız başarıyla gönderildi!');
+          // Formu temizle
+          form.reset();
+        } else {
+          // Hata mesajı göster
+          alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
