@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gizlilik Politikası - Ozora Haxball Eğitim</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMB0ND5432"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EMB0ND5432');
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="haxball.css" />
+</head>
+<body>
+
+  <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
+
+  <div class="sidebar">
+    <h3><i class="fas fa-wrench"></i> Hızlı Erişim</h3>
+    <a href="index.html#profil"><i class="fas fa-user"></i> Profilim</a>
+    <a href="index.html#neden"><i class="fas fa-question-circle"></i> Neden Takip Etmelisin?</a>
+    <a href="index.html#icerikler"><i class="fas fa-list"></i> İçerikler</a>
+    <a href="index.html#gunun"><i class="fas fa-lightbulb"></i> Günün Taktiği</a>
+    <a href="index.html#istatistik"><i class="fas fa-chart-bar"></i> İstatistikler</a>
+    <a href="iletisim.html"><i class="fas fa-envelope"></i> İletişim</a>
+    <a href="feedback.html"><i class="fas fa-comment"></i> Bize Ulaşın</a>
+    <a href="yorumlar.html"><i class="fas fa-comments"></i> Yorumlar</a>
+    <a href="hakkimizda.html"><i class="fas fa-question-circle"></i>Hakkımızda</a>
+    <a href="cerezler.html"><i class="fas fa-question-circle"></i>Cerezler</a>
+  </div>
+
+  <div class="content">
+    <main>
+      <h1>Gizlilik Politikası</h1>
+      <p>Ozora Haxball Eğitim sitesi olarak kullanıcılarımızın gizliliğine büyük önem veriyoruz. Bu gizlilik politikası, kişisel bilgilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
+
+      <h2>Toplanan Bilgiler</h2>
+      <ul>
+        <li>Kullanıcıların siteye erişim bilgileri (IP adresi, tarayıcı türü, ziyaret zamanı vb.)</li>
+        <li>Yorum ve geri bildirim formu aracılığıyla sağlanan bilgiler</li>
+        <li>Çerezler ve benzeri teknolojilerle toplanan veriler</li>
+      </ul>
+
+      <h2>Bilgilerin Kullanımı</h2>
+      <ul>
+        <li>Site deneyimini kişiselleştirmek ve geliştirmek</li>
+        <li>Geri bildirimleri değerlendirmek ve kullanıcılarla iletişim kurmak</li>
+        <li>Hizmetlerimizi iyileştirmek ve güvenliği sağlamak</li>
+      </ul>
+
+      <h2>Çerez Politikası</h2>
+      <p>Site, kullanıcı deneyimini artırmak amacıyla çerezler kullanmaktadır. Çerezler, tarayıcınızda küçük dosyalar olarak saklanır ve tercihlerinizi hatırlamamıza yardımcı olur. Çerezleri kabul etmeyi reddedebilirsiniz, ancak bu durumda bazı site özellikleri kısıtlanabilir.</p>
+
+      <h2>Bilgi Güvenliği</h2>
+      <p>Kişisel bilgileriniz, güvenlik önlemleriyle korunmakta ve üçüncü taraflarla paylaşılmamaktadır. Ancak internet üzerinden iletilen verilerin tamamen güvenliğinin garanti edilemeyeceğini belirtmek isteriz.</p>
+
+      <h2>Kullanıcı Hakları</h2>
+      <p>Kişisel verilerinize erişim, düzeltme veya silme taleplerinizi bize iletebilirsiniz. Bu konuda bizimle iletişime geçmekten çekinmeyin.</p>
+
+      <h2>İletişim</h2>
+      <p>Gizlilik politikamızla ilgili sorularınız için <a href="iletisim.html">İletişim</a> sayfamızı kullanabilirsiniz.</p>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <marquee behavior="scroll" direction="left" scrollamount="10">HaxBall ile ilgili daha fazla bilgi için Instagram hesabımızı takip edin!</marquee>
+    <a href="https://instagram.com/haxballoynayantsubasa" loading="lazy" target="_blank">
+      <img src="instagram.png" width="40px" alt="Instagram">
+    </a>
+    <p>© 2025 OzoraHaxball</p>
+  </footer>
+
+  <!-- Tawk.to Canlı Sohbet -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/680ca6d64b378d190bfa1d1a/1ipomne4l';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+
+      lazyMedia.forEach(media => {
+        media.addEventListener("load", () => {
+          media.classList.add("loaded");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
