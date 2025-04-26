@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta property="og:title" content="Haxball'da Top Sürme Becerileri" />
-<meta property="og:description" content="Dar alanlarda bile topu rakibe kaptırmadan nasıl sürebilirsin?" />
-<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-topsurme.jpg" />
-<meta property="og:url" content="https://haxballegitim.netlify.app/topsurme.html" />
-<meta property="og:type" content="article" />
-<meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:title" content="Haxball'da Top Sürme Becerileri" />
+  <meta property="og:description" content="Dar alanlarda bile topu rakibe kaptırmadan nasıl sürebilirsin?" />
+  <meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-topsurme.jpg" />
+  <meta property="og:url" content="https://haxballegitim.netlify.app/topsurme.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Sürme - Ozora Haxball Education</title>
   <link rel="stylesheet" href="haxball.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMB0ND5432"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,25 +31,24 @@
 <body>
   <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
-    <h3>🔧 Hızlı Erişim</h3>
-    <a href="index.html">Ana Sayfa</a>
-    <a href="#teknikler">Temel Teknikler</a>
-    <a href="#taktikler">Taktiksel Öneriler</a>
+    <h3><i class="fas fa-futbol"></i> Hızlı Erişim</h3>
+    <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+    <a href="#teknikler"><i class="fas fa-hand-point-right"></i> Temel Teknikler</a>
+    <a href="#taktikler"><i class="fas fa-lightbulb"></i> Taktiksel Öneriler</a>
   </div>
 
   <div class="content">
     <div class="menu-bar">
-      <a href="sutcekme.html">Şut Çekme</a>
-      <a href="calimatma.html">Çalım Atma</a>
-      <a href="alankapatma.html">Alan Kapatma</a>
-      <a href="pas.html">Pas Atma</a>
-      <a href="extrapolation.html">Extrapolation</a>
-      <a href="handicap.html">Handicap</a>
-      <a href="komutlar.html">Komutlar</a>
+      <a href="sutcekme.html"><i class="fas fa-bullseye"></i> Şut Çekme</a>
+      <a href="calimatma.html"><i class="fas fa-running"></i> Çalım Atma</a>
+      <a href="alankapatma.html"><i class="fas fa-shield-alt"></i> Alan Kapatma</a>
+      <a href="pas.html"><i class="fas fa-exchange-alt"></i> Pas Atma</a>
+      <a href="extrapolation.html"><i class="fas fa-chart-line"></i> Extrapolation</a>
+      <a href="handicap.html"><i class="fas fa-balance-scale"></i> Handicap</a>
+      <a href="komutlar.html"><i class="fas fa-terminal"></i> Komutlar</a>
     </div>
 
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
+    <ins class="adsbygoogle" style="display:block; text-align:center;"
          data-ad-client="ca-pub-3696374850517387"
          data-ad-slot="1234567890"
          data-ad-format="auto"
@@ -81,25 +87,24 @@
       const sidebar = document.querySelector(".sidebar");
       sidebar.classList.toggle("active");
     }
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
-    
-        lazyMedia.forEach(media => {
-          media.addEventListener("load", () => {
-            media.classList.add("loaded");
-          });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
+
+      lazyMedia.forEach(media => {
+        media.addEventListener("load", () => {
+          media.classList.add("loaded");
         });
       });
-    </script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
-          .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
-      }
-    </script>
-    
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('✅ Service Worker başarıyla yüklendi.'))
+        .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
+    }
+  </script>
 </body>
 </html>
