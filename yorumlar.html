@@ -2,20 +2,22 @@
 <html lang="tr">
 <head>
   <meta property="og:title" content="Yorumlarını Bizimle Paylaş!" />
-<meta property="og:description" content="Senin fikirlerin bizim için önemli. Düşüncelerini bildir!" />
-<meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-feedback.jpg" />
-<meta property="og:url" content="https://haxballegitim.netlify.app/yorumlar.html" />
-<meta property="og:type" content="article" />
-<meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:description" content="Senin fikirlerin bizim için önemli. Düşüncelerini bildir!" />
+  <meta property="og:image" content="https://haxballegitim.netlify.app/assets/og-feedback.jpg" />
+  <meta property="og:url" content="https://haxballegitim.netlify.app/yorumlar.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yorumlar - Ozora HaxTopu</title>
   <link rel="stylesheet" href="haxball.css" />
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Google Adsense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387"
-          crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SEVTT23ZZ"></script>
@@ -106,7 +108,7 @@
         margin: 20px 10px;
       }
     }
-  
+
     /* Mesaj kutusu stili */
     .alert {
       display: none;
@@ -118,15 +120,14 @@
       border-radius: 5px;
       margin: 10px 0;
     }
-  
   </style>
 </head>
 <body>
   <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
-    <div class="sidebar">
-        <h3>🔧 Hızlı Erişim</h3>
-        <a href="index.html">Ana Sayfa</a>
-      </div>
+  <div class="sidebar">
+    <h3><i class="fas fa-comments"></i> Yorumlar</h3>
+    <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+  </div>
 
   <div class="container">
     <div class="logo-area">
@@ -136,7 +137,7 @@
     <div class="title">Sizden Gelenler</div>
 
     <textarea id="yorum" placeholder="Yorumunuzu yazın..."></textarea>
-    <button onclick="gonder()">Gönder</button>
+    <button onclick="gonder()"><i class="fas fa-paper-plane"></i> Gönder</button>
 
     <div class="comment-list" id="yorumlarAlani">
       <!-- Firebase yorumları buraya yüklenecek -->
@@ -145,10 +146,6 @@
     <div class="footer">
       © 2025 Ozora HaxTopu | Tüm hakları saklıdır.
     </div>
-  </div>
-   <!-- Mesaj Alanı -->
-   <div class="alert" id="message-alert">
-    Çok Yakında Aktif Olacak
   </div>
 
   <!-- Firebase SDK -->
@@ -203,31 +200,18 @@
     }
 
     yorumlariGetir();
-
-       // Mesajı göstermek için fonksiyon
-       function showMessage(event) {
-      event.preventDefault(); // Formun gönderilmesini engeller
-
-      // Mesajı göster
-      document.getElementById("message-alert").style.display = "block";
-
-      // 5 saniye sonra mesajı gizle
-      setTimeout(function() {
-        document.getElementById("message-alert").style.display = "none";
-      }, 5000);
-    }
   </script>
 
-<script>
-  function toggleSidebar() {
-    const sidebar = document.querySelector(".sidebar");
-    sidebar.classList.toggle("active");
-  }
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    }
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
-  
+
       lazyMedia.forEach(media => {
         media.addEventListener("load", () => {
           media.classList.add("loaded");
@@ -242,6 +226,5 @@
         .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
     }
   </script>
-  
 </body>
 </html>
