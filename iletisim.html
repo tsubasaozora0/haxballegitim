@@ -5,35 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>İletişim - Ozora Haxball</title>
   <link rel="stylesheet" href="haxball.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3696374850517387" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="menu-toggle" onclick="toggleSidebar()">☰ Menü</div>
   <div class="sidebar">
-    <h3>📬 İletişim</h3>
-    <a href="index.html">Ana Sayfa</a>
+    <h3><i class="fas fa-envelope"></i> İletişim</h3>
+    <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
   </div>
 
   <div class="content">
     <div class="box">
-      <h2>📩 Bize Ulaşın</h2>
-      <form action="https://formspree.io/f/your_form_id" method="POST">
-        <label for="name">Ad Soyad:</label><br>
+      <h2><i class="fas fa-envelope-open-text"></i> Bize Ulaşın</h2>
+      <form action="https://formspree.io/f/xpwdwdnp" method="POST">
+        <label for="name"><i class="fas fa-user"></i> Ad Soyad:</label><br>
         <input type="text" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px;" /><br>
 
-        <label for="email">E-posta:</label><br>
+        <label for="email"><i class="fas fa-envelope"></i> E-posta:</label><br>
         <input type="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;" /><br>
 
-        <label for="message">Mesaj:</label><br>
+        <label for="message"><i class="fas fa-comment-dots"></i> Mesaj:</label><br>
         <textarea name="message" rows="6" required style="width: 100%; padding: 10px;"></textarea><br><br>
 
-        <button type="submit" style="padding: 12px 24px; background-color: var(--accent-color); color: #000; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">Gönder</button>
+        <button type="submit" style="padding: 12px 24px; background-color: var(--accent-color); color: #000; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;"><i class="fas fa-paper-plane"></i> Gönder</button>
       </form>
     </div>
 
     <footer class="footer">
       <marquee behavior="scroll" direction="left" scrollamount="10">Bizimle iletişime geçin, birlikte geliştirelim!</marquee>
-      <a href="https://instagram.com/haxballoynayantsubasa"  target="_blank">
+      <a href="https://instagram.com/haxballoynayantsubasa" target="_blank">
         <img src="instagram.png" loading="lazy" width="40px" alt="Instagram">
       </a>
       <p>© 2025 OzoraHaxball</p>
@@ -44,11 +49,11 @@
       const sidebar = document.querySelector(".sidebar");
       sidebar.classList.toggle("active");
     }
-    </script>
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const lazyMedia = document.querySelectorAll("img[loading='lazy'], video[loading='lazy']");
-  
+
       lazyMedia.forEach(media => {
         media.addEventListener("load", () => {
           media.classList.add("loaded");
@@ -63,6 +68,34 @@
         .catch(error => console.error('❌ Service Worker yüklenemedi:', error));
     }
   </script>
-  
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+      // Formun varsayılan davranışını engelle
+      event.preventDefault();
+
+      // Form verilerini al
+      const formData = new FormData(form);
+
+      // Formu Formspree'ye gönder
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // Başarı mesajı göster
+          alert('Mesajınız başarıyla gönderildi!');
+          // Formu temizle
+          form.reset();
+        } else {
+          // Hata mesajı göster
+          alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
